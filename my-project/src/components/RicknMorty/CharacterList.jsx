@@ -13,7 +13,7 @@ export default function CharacterList() {
         setError(null);
 
         try {
-            const res = await fetch("https://rickandmortyapi.com/api/character");
+            const res = await fetch("http://localhost:8080/api/characters");
             if (!res.ok) throw new Error(`Http status code: ${res.status}`);
             const data = await res.json();
             setCharacters(data.results);
@@ -29,8 +29,7 @@ export default function CharacterList() {
     }, []);
 
     const filteredCharacters = characters.filter(c =>
-        c.name.toLowerCase().includes(search.toLowerCase()) ||
-        c.species.toLowerCase().includes(search.toLowerCase())
+        c.name.toLowerCase().includes(search.toLowerCase())
     );
 
     function clearSearch() {
