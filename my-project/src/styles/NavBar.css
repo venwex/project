@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #222;
+  color: white;
+  margin-left: 300px;
+}
+
+.links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.links a.active {
+  border-bottom: 2px solid #61dafb;
+}

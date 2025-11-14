@@ -1,0 +1,16 @@
+.characters-list {
+  padding: 20px;
+  text-align: center;
+  margin-left: 550px;
+}
+
+.characters-list input {
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.list-grid {
+  display: grid;
+  gap: 20px;
+}

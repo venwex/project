@@ -1,0 +1,14 @@
+.home {
+  text-align: center;
+  padding: 30px;
+  margin-left: 250px;
+}
+
+.navbar {
+    margin-left: 250px;
+}
+
+.home img {
+  margin-top: 20px;
+  border-radius: 10px;
+}

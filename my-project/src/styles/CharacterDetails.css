@@ -1,0 +1,16 @@
+.character-details {
+  text-align: center;
+  padding: 20px;
+}
+
+.character-details img {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.character-details button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+}

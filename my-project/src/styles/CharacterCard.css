@@ -1,0 +1,26 @@
+.character-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.character-card:hover {
+  transform: scale(1.03);
+}
+
+.character-card img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.character-card a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.character-card a:hover {
+  text-decoration: underline;
+}
