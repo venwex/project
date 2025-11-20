@@ -29,7 +29,6 @@
   padding: 6px 10px;
   border-radius: 6px;
 
-  /* Плавная анимация */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -38,8 +37,15 @@
   color: #fff;
 }
 
-/* Активная ссылка NavLink */
 .links a.active {
   background-color: #4caf50;
   color: white;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
 }

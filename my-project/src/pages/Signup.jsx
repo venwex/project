@@ -1,26 +1,28 @@
 import React, { useState } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import "../styles/Auth.css";
 
-export default function Login() {
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { login } = useAuth();
+  const { signup } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const from = location.state?.from?.pathname || "/profile";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
+    if (password !== confirm) {
+      setError("Passwords do not match");
+      return;
+    }
     try {
       setLoading(true);
-      await login(email, password);
-      navigate(from, { replace: true });
+      await signup(email, password);
+      navigate("/profile");
     } catch (err) {
       setError(err.message);
     } finally {
@@ -30,7 +32,7 @@ export default function Login() {
 
   return (
     <div className="auth-container">
-      <h2>Login</h2>
+      <h2>Sign Up</h2>
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="input-group">
@@ -53,12 +55,22 @@ export default function Login() {
             required
           />
         </div>
+        <div className="input-group">
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            placeholder="Confirm your password"
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+            required
+          />
+        </div>
         <button disabled={loading} type="submit">
-          {loading ? "Logging in..." : "Log in"}
+          {loading ? "Signing up..." : "Sign up"}
         </button>
       </form>
       <p>
-        Need an account? <Link to="/signup">Sign up</Link>
+        Already have an account? <Link to="/login">Log in</Link>
       </p>
     </div>
   );
