@@ -26,6 +26,7 @@ export default function CharactersList() {
         setLoading(false);
       }
     }
+    
     load();
   }, [query]);
 

@@ -11,3 +11,8 @@ export default function RootLayout() {
     </>
   );
 }
+
+<main style={{ paddingTop: "20px" }}>
+  <Outlet />
+</main>
+

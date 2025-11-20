@@ -1,8 +1,14 @@
 .characters-list {
   padding: 20px;
   text-align: center;
-  margin-left: 550px;
+  max-width: 1200px;
+  margin-left: 100px;
+  height: 1000px;
 }
+.title {
+  margin-top: 40px;
+}
+
 
 .characters-list input {
   padding: 8px 12px;
@@ -11,6 +17,10 @@
 }
 
 .list-grid {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
+
+

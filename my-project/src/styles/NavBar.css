@@ -1,19 +1,45 @@
 .navbar {
+  width: 800px;
+  height: 50px;
   display: flex;
+  margin-left: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background-color: #222;
+  padding: 16px 24px;
+  background-color: #1f1f1f;
   color: white;
   margin-left: 300px;
 }
 
-.links a {
-  margin-left: 20px;
-  color: white;
-  text-decoration: none;
+.navbar h2 {
+  margin: 0;
+  font-size: 20px;
 }
 
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  /* Плавная анимация */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.links a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Активная ссылка NavLink */
 .links a.active {
-  border-bottom: 2px solid #61dafb;
+  background-color: #4caf50;
+  color: white;
 }
