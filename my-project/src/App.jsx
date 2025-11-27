@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import CharactersList from "./pages/CharacterList";
-import CharacterDetails from "./pages/CharacterDetails";
+import ItemsList from "./pages/ItemsList";
+import ItemDetails from "./pages/ItemsDetails";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";       
 import Profile from "./pages/Profile";      
@@ -16,8 +16,8 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
 
-        <Route path="items" element={<CharactersList />} />
-        <Route path="items/:id" element={<CharacterDetails />} />
+        <Route path="items" element={<ItemsList />} />
+        <Route path="items/:id" element={<ItemDetails />} />
 
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />

@@ -1,5 +1,6 @@
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import "../styles/Profile.css";
 
 export default function Profile() {
   const { currentUser, logout } = useAuth();
@@ -17,7 +18,7 @@ export default function Profile() {
   if (!currentUser) return null;
 
   return (
-    <div>
+    <div className="profile-container">
       <h2>Profile</h2>
       <p><strong>Email:</strong> {currentUser.email}</p>
       <p><strong>UID:</strong> {currentUser.uid}</p>
