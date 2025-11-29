@@ -22,6 +22,8 @@ export default function Login() {
       await login(email, password);
       navigate(from, { replace: true });
     } catch (err) {
+      setEmail(null)
+      setPassword(null)
       setError(err.message);
     } finally {
       setLoading(false);

@@ -6,7 +6,6 @@ import CharacterCard from '../components/CharacterCard';
 import Spinner from '../components/Spinner';
 import ErrorBox from '../components/ErrorBox';
 import '../styles/ItemsPage.css';
-// import itemsReducer from '../features/items/itemsSlice';
 
 function ItemsPage() {
   const dispatch = useDispatch();

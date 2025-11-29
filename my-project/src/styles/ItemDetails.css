@@ -1,9 +1,13 @@
-.items-page {
+.character-details {
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
+  margin-left: 600px;
+}
+
+.items-page {
   margin-left: 300px;
 }
 

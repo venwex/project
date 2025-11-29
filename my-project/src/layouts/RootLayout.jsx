@@ -12,7 +12,7 @@ export default function RootLayout() {
   );
 }
 
-<main style={{ paddingTop: "20px" }}>
+{/* <main style={{ paddingTop: "20px" }}>
   <Outlet />
-</main>
+</main> */}
 
